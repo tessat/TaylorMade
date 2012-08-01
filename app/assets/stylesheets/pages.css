@@ -1,0 +1,55 @@
+/* Pages Specific CSS */
+
+/**************
+Pages
+***************/
+
+/* Pages: Index */
+
+.pages.index {
+	width:920px;
+	margin:0 auto;
+	background:#ffbb73;
+	padding:10px 20px;
+	border:1px solid #4a2601;
+	border-top:none;
+	min-height:300px;
+	-moz-border-radius: 0px 0px 10px 10px; /* Firefox */
+	-webkit-border-radius: 0px 0px 10px 10px; /* Safari, Chrome */
+	border-radius: 0px 0px 10px 10px; /* CSS3 */
+}
+
+.pages.index .projects h1 {
+	font-size:40px;
+	margin:5px 0px;
+	color:#111;
+	border-bottom:1px dashed #3c9dd0;
+}
+
+.pages.index .projects ul {
+	padding:0px 5px;
+	margin:10px 0px;
+}
+
+.pages.index .projects ul li {
+	margin:0px 0px 10px;
+	padding:5px 10px;
+	background:#ffc98f;
+	border:1px solid #086ca2;
+}
+
+.pages.index .projects ul li h1 {
+	margin:0px;
+	font-size:30px;
+	border:none;
+}
+
+.pages.index .projects ul li h1 a {
+	color:#024e68;
+}
+
+.pages.index .projects ul li h2 {
+	margin:0px;
+	font-weight:normal;
+	font-size:14px;
+}
