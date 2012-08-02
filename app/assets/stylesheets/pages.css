@@ -23,19 +23,20 @@ Pages
 	font-size:40px;
 	margin:5px 0px;
 	color:#111;
-	border-bottom:1px dashed #3c9dd0;
+	border-bottom:1px dashed #fb9d43;
 }
 
 .pages.index .projects ul {
 	padding:0px 5px;
-	margin:10px 0px;
+	margin:15px 0px;
 }
 
 .pages.index .projects ul li {
 	margin:0px 0px 10px;
 	padding:5px 10px;
 	background:#ffc98f;
-	border:1px solid #086ca2;
+	border-right:1px solid #feb260;
+	border-bottom:1px solid #feb260;
 }
 
 .pages.index .projects ul li h1 {
@@ -45,7 +46,7 @@ Pages
 }
 
 .pages.index .projects ul li h1 a {
-	color:#024e68;
+	color:#086CA2;
 }
 
 .pages.index .projects ul li h2 {
