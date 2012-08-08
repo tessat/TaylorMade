@@ -4,9 +4,26 @@
 		<h1>Current Projects</h1>
 		<ul>
 			<li>
-				<h1>
-					<a href="http://coapp.co" target="_blank">Co</a></h1>
-				<h2>Where Your Worlds Converge</h2>
+				<div class="info">
+					<%= link_to image_tag('http://coapp.co/assets/logo.png', :height => '45px'), "http://coapp.co", :target => '_blank', :class => 'logo' %>
+					<h1><%= link_to "Co", "http://coapp.co", :target => "_blank" %></h1>
+					<h2>Where Your Worlds Converge</h2>
+				</div>
+				
+				<div class="social-bar">
+					<ul>
+						<li>
+							<%= link_to image_tag('facebook-small.png', :class => 'facebook', :height => '30px'), "https://www.facebook.com/gocoapp", 'target' => '_blank' %>
+						</li>
+						<li>
+							<%= link_to image_tag('twitter-small.png', :class => 'twitter', :height => '30px'), "https://twitter.com/GoCoApp", 'target' => '_blank' %>
+						</li>
+						<li>
+							<%= link_to image_tag('blog-small.png', :class => 'blog', :height => '30px'), "http://blog.coapp.co", 'target' => '_blank' %>
+						</li>
+					</ul>
+				</div>
+				<%= clear_block %>
 			</li>
 		</ul>
 	</div>

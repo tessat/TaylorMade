@@ -14,4 +14,8 @@ module ApplicationHelper
     end
   end
   
+  def clear_block
+    content_tag(:div, " ", :class => 'clear')
+  end
+  
 end

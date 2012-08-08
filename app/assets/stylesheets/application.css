@@ -61,18 +61,22 @@ ul {
 	float:right;
 }
 
+.clear {
+	display:block;
+	clear:both;
+	height:1px;
+	width:1px;
+}
+
 /* Header */
 
 #header {
 	text-align:center;
 	width:900px;
 	padding:20px 50px 10px;
-	background:#111;
+	background:#222;
 	margin:0 auto;
 	color:#eee;
-	border-top:1px solid #fff;
-	border-left:1px solid #ffbb73;
-	border-right:1px solid #ffbb73;
 }
 
 #header h1 {

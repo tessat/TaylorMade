@@ -8,22 +8,21 @@ Pages
 
 .pages.index {
 	width:920px;
-	margin:0 auto;
-	background:#ffbb73;
+	margin:20px auto;
 	padding:10px 20px;
-	border:1px solid #4a2601;
-	border-top:none;
+	background:#fff;
+	border:1px dashed #aaa;
 	min-height:300px;
-	-moz-border-radius: 0px 0px 10px 10px; /* Firefox */
-	-webkit-border-radius: 0px 0px 10px 10px; /* Safari, Chrome */
-	border-radius: 0px 0px 10px 10px; /* CSS3 */
+	-moz-border-radius: 10px; /* Firefox */
+	-webkit-border-radius: 10px; /* Safari, Chrome */
+	border-radius: 10px; /* CSS3 */
 }
 
 .pages.index .projects h1 {
 	font-size:40px;
 	margin:5px 0px;
-	color:#111;
-	border-bottom:1px dashed #fb9d43;
+	color:#064b70;
+	border-bottom:1px solid #f6f6f6;
 }
 
 .pages.index .projects ul {
@@ -33,10 +32,20 @@ Pages
 
 .pages.index .projects ul li {
 	margin:0px 0px 10px;
-	padding:5px 10px;
-	background:#ffc98f;
-	border-right:1px solid #feb260;
-	border-bottom:1px solid #feb260;
+	padding:8px 10px;
+	background:#eee;
+	border-bottom:1px dotted #ddd;
+	height:48px;
+}
+
+.pages.index .projects ul li .info {
+	float:left;
+	width:60%;
+}
+
+.pages.index .projects ul li a.logo {
+	float:left;
+	margin-right:8px;
 }
 
 .pages.index .projects ul li h1 {
@@ -46,11 +55,29 @@ Pages
 }
 
 .pages.index .projects ul li h1 a {
-	color:#086CA2;
+	color:#111;
 }
 
 .pages.index .projects ul li h2 {
 	margin:0px;
 	font-weight:normal;
 	font-size:14px;
+}
+
+.pages.index .projects ul li .social-bar {
+	float:right;
+	margin-right:7px;
+}
+
+.pages.index .projects ul li .social-bar ul {
+	padding:0px;
+	margin:0px;
+}
+
+.pages.index .projects ul li .social-bar ul li {
+	display:inline-block;
+	background:none;
+	border:none;
+	padding:0px;
+	margin:10px 4px;
 }
