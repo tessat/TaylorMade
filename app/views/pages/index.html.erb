@@ -1,31 +1,58 @@
 <div class="pages index">
 	
-	<div class="projects">
-		<h1>Current Projects</h1>
+	<div class="sign">
+		<h1>
+			Current Projects
+			<div class="knots bottom">
+				<%= image_tag('knot.png', :class => 'left') %>
+				<%= image_tag('knot.png', :class => 'right') %>
+			</div>
+		</h1>
+		
 		<ul>
-			<li>
-				<div class="info">
-					<%= link_to image_tag('http://coapp.co/assets/logo.png', :height => '45px'), "http://coapp.co", :target => '_blank', :class => 'logo' %>
-					<h1><%= link_to "Co", "http://coapp.co", :target => "_blank" %></h1>
-					<h2>Where Your Worlds Converge</h2>
+			<li class="shadow up">
+				<div class="rope">
+					<%= image_tag('rope.png', :class => 'left') %>
+					<%= image_tag('rope.png', :class => 'right') %>
+				</div>
+
+				<div class="bg">
+					<div class="knots top">
+						<%= image_tag('knot.png', :class => 'left') %>
+						<%= image_tag('knot.png', :class => 'right') %>
+					</div>
+					
+					<div class="info">
+						<%= link_to image_tag('http://coapp.co/assets/logo.png', :height => '45px'), "http://coapp.co", :target => '_blank', :class => 'logo' %>
+						<h1><%= link_to "Co", "http://coapp.co", :target => "_blank" %></h1>
+						<h2>Where Your Worlds Converge</h2>
+					</div>
+				
+					<div class="social-bar">
+						<ul>
+							<li>
+								<%= link_to image_tag('facebook.png', :class => 'facebook', :height => '40px'), "https://www.facebook.com/gocoapp", 'target' => '_blank' %>
+							</li>
+							<li>
+								<%= link_to image_tag('twitter.png', :class => 'twitter', :height => '40px'), "https://twitter.com/GoCoApp", 'target' => '_blank' %>
+							</li>
+							<li>
+								<%= link_to image_tag('blog.png', :class => 'blog', :height => '40px'), "http://blog.coapp.co", 'target' => '_blank' %>
+							</li>
+						</ul>
+					</div>
+					<%= clear_block %>
+					
+					<div class="knots bottom">
+						<%= image_tag('knot.png', :class => 'left') %>
+						<%= image_tag('knot.png', :class => 'right') %>
+					</div>
 				</div>
 				
-				<div class="social-bar">
-					<ul>
-						<li>
-							<%= link_to image_tag('facebook-small.png', :class => 'facebook', :height => '30px'), "https://www.facebook.com/gocoapp", 'target' => '_blank' %>
-						</li>
-						<li>
-							<%= link_to image_tag('twitter-small.png', :class => 'twitter', :height => '30px'), "https://twitter.com/GoCoApp", 'target' => '_blank' %>
-						</li>
-						<li>
-							<%= link_to image_tag('blog-small.png', :class => 'blog', :height => '30px'), "http://blog.coapp.co", 'target' => '_blank' %>
-						</li>
-					</ul>
-				</div>
-				<%= clear_block %>
 			</li>
+
 		</ul>
+		
 	</div>
 	
 </div>

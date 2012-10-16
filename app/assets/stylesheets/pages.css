@@ -7,10 +7,18 @@ Pages
 /* Pages: Index */
 
 .pages.index {
-	width:920px;
-	margin:20px auto;
-	padding:10px 20px;
-	background:#fff;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with opacity */
+	background: rgba(255, 255, 255, 0.8);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
+	
+	width:875px;
+	margin:15px auto;
+	padding:5px 20px 10px;
 	border:1px dashed #aaa;
 	min-height:300px;
 	-moz-border-radius: 10px; /* Firefox */
@@ -18,66 +26,302 @@ Pages
 	border-radius: 10px; /* CSS3 */
 }
 
-.pages.index .projects h1 {
-	font-size:40px;
-	margin:5px 0px;
-	color:#064b70;
-	border-bottom:1px solid #f6f6f6;
+/* Sign with header and cascading rungs */
+
+.pages.index .sign {
+	
 }
 
-.pages.index .projects ul {
-	padding:0px 5px;
-	margin:15px 0px;
+/* General knots behavior */
+
+.pages.index .sign div.knots {
+	position:absolute;
+	left:0px;
+	width:100%;
 }
 
-.pages.index .projects ul li {
-	margin:0px 0px 10px;
-	padding:8px 10px;
-	background:#eee;
-	border-bottom:1px dotted #ddd;
-	height:48px;
+.pages.index .sign div.knots.top {
+	top:0px;
 }
 
-.pages.index .projects ul li .info {
+.pages.index .sign div.knots.bottom {
+	bottom:0px;
+}
+
+.pages.index .sign div.knots img {
+	position:absolute;
+	width:20px;
+}
+
+.pages.index .sign div.knots img.left {
+	left:0px;
+}
+
+.pages.index .sign div.knots img.right {
+	right:0px;
+}
+
+/* Sign header */
+
+.pages.index .sign h1 {
+	background:url('../assets/sign-header.png') no-repeat;
+	width:850px;
+	height:130px;
+	padding:35px 0px;
+	position:relative;
+	margin:0px auto;
+	font-family: 'Waiting for the Sunrise', cursive;
+	text-align:center;
+	font-size:80px;
+	color:#542b11;
+	font-weight:normal;
+	text-shadow:1px 1px 1px #dac4b6;
+	z-index:2000;
+}
+
+.pages.index .sign h1 div.knots img {
+	bottom:25px;
+}
+
+.pages.index .sign h1 div.knots img.left {
+	left:80px;
+}
+
+.pages.index .sign h1 div.knots img.right {
+	right:80px;
+}
+
+/* Cascading elments */
+
+.pages.index .sign ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	position:relative;
+	top:-20px;
+}
+
+/* Cascading elments animation */
+
+.pages.index .sign ul li {
+	position:relative;
+	text-align:center;
+	margin:60px auto;
+	width:700px;
+	
+	-moz-transition: 0.3s ease-in;
+	-webkit-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
+	-ms-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
+}
+
+.pages.index .sign ul li:nth-child(5n+1) {
+	z-index:1000;
+}
+
+.pages.index .sign ul li:nth-child(5n+2) {
+	z-index:900;
+}
+
+.pages.index .sign ul li:nth-child(5n+3) {
+	z-index:800;
+}
+
+.pages.index .sign ul li:nth-child(5n+4) {
+	z-index:700;
+}
+
+.pages.index .sign ul li:nth-child(5n+5) {
+	z-index:600;
+}
+
+.pages.index .sign ul li.up {
+	/* Rotated 90 degrees along the x axis */
+	-moz-transform:perspective(400px) rotateX(-90deg);
+	-webkit-transform:perspective(400px) rotateX(-90deg);
+	-o-transform:perspective(400px) rotateX(-90deg);
+	-ms-transform:perspective(400px) rotateX(-90deg);
+	transform:perspective(400px) rotateX(-90deg);
+	
+	/* Moved up */
+	-moz-transform-origin:50% -80%;
+	-webkit-transform-origin:50% -80%;
+	-o-transform-origin:50% -80%;
+	-ms-transform-origin:50% -80%;
+	transform-origin:50% -80%;
+}
+
+.pages.index .sign ul li.down {
+	/* Rotate down */
+	-moz-transform:perspective(400px) rotateX(0deg);
+	-webkit-transform:perspective(400px) rotateX(0deg);
+	-o-transform:perspective(400px) rotateX(0deg);
+	-ms-transform:perspective(400px) rotateX(0deg);
+	transform:perspective(400px) rotateX(0deg);
+}
+
+.pages.index .sign ul li.swing {
+	-moz-transition: 0.4s ease-in;
+	-webkit-transition: 0.4s ease-in;
+	-o-transition: 0.4s ease-in;
+	-ms-transition: 0.4s ease-in;
+	transition: 0.4s ease-in;
+	
+	/* Swing forward */
+	-moz-transform:perspective(400px) rotateX(10deg);
+	-webkit-transform:perspective(400px) rotateX(10deg);
+	-o-transform:perspective(400px) rotateX(10deg);
+	-ms-transform:perspective(400px) rotateX(10deg);
+	transform:perspective(400px) rotateX(10deg);
+}
+
+.pages.index .sign ul li.swing.back {	
+	/* Swing back */
+	-moz-transform:perspective(400px) rotateX(-10deg);
+	-webkit-transform:perspective(400px) rotateX(-10deg);
+	-o-transform:perspective(400px) rotateX(-10deg);
+	-ms-transform:perspective(400px) rotateX(-10deg);
+	transform:perspective(400px) rotateX(-10deg);
+}
+
+/* Cascading elments styling */
+
+.pages.index .sign ul li div.rope {
+	position:absolute;
+	display:block;
+	top:-85px;
+	width:inherit;
+}
+
+.pages.index .sign ul li div.rope img {
+	display:block;
+	height:100px;
+	position:absolute;
+}
+
+.pages.index .sign ul li div.rope img.left {
+	left:4px;
+}
+
+.pages.index .sign ul li div.rope img.right {
+	right:4px;
+}
+
+.pages.index .sign ul li div.knots.top img {
+	top:3px;
+}
+
+.pages.index .sign ul li div.knots.bottom img {
+	bottom:3px;
+}
+
+.pages.index .sign ul li div.knots img.left {
+	left:4px;
+}
+
+.pages.index .sign ul li div.knots img.right {
+	right:4px;
+}
+
+.pages.index .sign ul li div.bg {
+	padding:24px 22px 0px;
+	position:relative;
+	
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.pages.index .sign ul li:nth-child(3n+1) div.bg {
+	background:url('../assets/sign01.png');
+}
+
+.pages.index .sign ul li:nth-child(3n+2) div.bg {
+	background:url('../assets/sign02.png');
+}
+
+.pages.index .sign ul li:nth-child(3n+3) div.bg {
+	background:url('../assets/sign03.png');
+}
+
+.pages.index .sign ul li .info {
 	float:left;
 	width:60%;
 }
 
-.pages.index .projects ul li a.logo {
+.pages.index .sign ul li a.logo {
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(255, 255, 255);
+	/* RGBa with opacity */
+	background: rgba(255, 255, 255, 0.9);
+	/* For IE 5.5 - 7*/
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF);
+	/* For IE 8*/
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
+	
+	border:1px solid #ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	
+	padding:3px;
 	float:left;
 	margin-right:8px;
 }
 
-.pages.index .projects ul li h1 {
-	margin:0px;
+.pages.index .sign ul li h1 {
+	background:none;
 	font-size:30px;
-	border:none;
+	font-family:Helvetica, Arial, sans-serif;
+	padding:0px;
+	width:auto;
+	height:auto;
+	text-align:left;
+	font-weight:bold;
 }
 
-.pages.index .projects ul li h1 a {
-	color:#111;
+.pages.index .sign ul li h1 a {
+	color:#132448;
+	text-shadow:1px 1px 1px #aaa;
 }
 
-.pages.index .projects ul li h2 {
+.pages.index .sign ul li h1 a:hover {
+	text-decoration:none;
+}
+
+.pages.index .sign ul li h2 {
+	padding:0px;
 	margin:0px;
+	text-align:left;
 	font-weight:normal;
-	font-size:14px;
+	font-size:30px;
+	font-family: 'Waiting for the Sunrise', cursive;
+	color:#3c1d09;
+	position:relative;
+	top:-10px;
 }
 
-.pages.index .projects ul li .social-bar {
+.pages.index .sign ul li .social-bar {
 	float:right;
 	margin-right:7px;
 }
 
-.pages.index .projects ul li .social-bar ul {
+.pages.index .sign ul li .social-bar ul {
 	padding:0px;
 	margin:0px;
+	top:0px;
 }
 
-.pages.index .projects ul li .social-bar ul li {
+.pages.index .sign ul li .social-bar ul li {
 	display:inline-block;
 	background:none;
 	border:none;
 	padding:0px;
-	margin:10px 4px;
+	margin:5px 4px 0px;
+	width:auto;
+	height:auto;
 }
+

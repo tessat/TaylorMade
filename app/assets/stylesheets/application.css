@@ -20,7 +20,7 @@ html, body {
 }
 
 body {
-	background:#fdf4ea;
+	background:url('../assets/bg-tree.png') #f0f6f0;
 	color:#222;
 	font-family:Helvetica, Arial, sans-serif;
 	padding:0px;
@@ -68,31 +68,57 @@ ul {
 	width:1px;
 }
 
+.shadow {
+	-moz-box-shadow: 3px 3px 4px #555;
+	-webkit-box-shadow: 3px 3px 4px #555;
+	box-shadow: 3px 3px 4px #555;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#555555')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#555555');
+}
+
 /* Header */
 
 #header {
 	text-align:center;
-	width:900px;
-	padding:20px 50px 10px;
-	background:#222;
+	width:100%;
+	padding:0px 0px 20px;
+	background:#132448;
 	margin:0 auto;
 	color:#eee;
+	height:90px;
+	border-top:1px solid #542b11;
+	border-bottom:2px solid #542b11;
 }
 
 #header h1 {
-	font-size:85px;
+	color:#ddd;
+	font-size:90px;
 	margin:0px;
+	font-weight:normal;
+	letter-spacing:8px;
+	text-shadow:1px 1px 1px #888888;
+	font-family: 'Raleway Dots', cursive;
 }
 
 #header h2 {
-	color:#086ca2;
-	font-size:20px;
-	width:500px;
-	margin:0 auto;
-	text-align:right;
-	position:relative;
-	top:-10px;
+	color:#6eb2af;
+	font-family: 'Black Ops One', cursive;
 	font-weight:normal;
+	font-size:60px;
+	margin:0px auto;
+	padding:0px;
+	position:relative;
+	top:-60px;
+	left:270px;
+	width:500px;
+	
+	-moz-transform:rotate(-20deg);
+	-webkit-transform:rotate(-20deg);
+	-o-transform:rotate(-20deg);
+	-ms-transform:rotate(-20deg);
+	transform:rotate(-20deg);
 }
 
 /* Content */
