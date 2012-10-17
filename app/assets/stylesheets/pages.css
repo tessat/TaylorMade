@@ -19,18 +19,37 @@ Pages
 	width:875px;
 	margin:15px auto;
 	padding:5px 20px 10px;
+	
 	border:1px dashed #aaa;
-	min-height:300px;
 	-moz-border-radius: 10px; /* Firefox */
 	-webkit-border-radius: 10px; /* Safari, Chrome */
+	-khtml-border-radius: 10px;
 	border-radius: 10px; /* CSS3 */
+	
+	/* initial position (pre-animation) */
+	height:200px;
 }
 
 /* Sign with header and cascading rungs */
 
 .pages.index .sign {
-	
+	position:relative;
+	top:0px;
 }
+
+/* initial position (pre-animation) */
+.pages.index .sign.up {
+	top:-400px;
+}
+
+.pages.index .sign.animate {
+	-moz-transition: 0.7s ease-in;
+	-webkit-transition: 0.7s ease-in;
+	-o-transition: 0.7s ease-in;
+	-ms-transition: 0.7s ease-in;
+	transition: 0.7s ease-in;
+}
+
 
 /* General knots behavior */
 
@@ -162,11 +181,11 @@ Pages
 }
 
 .pages.index .sign ul li.swing {
-	-moz-transition: 0.4s ease-in;
-	-webkit-transition: 0.4s ease-in;
-	-o-transition: 0.4s ease-in;
-	-ms-transition: 0.4s ease-in;
-	transition: 0.4s ease-in;
+	-moz-transition: 0.3s ease-in;
+	-webkit-transition: 0.3s ease-in;
+	-o-transition: 0.3s ease-in;
+	-ms-transition: 0.3s ease-in;
+	transition: 0.3s ease-in;
 	
 	/* Swing forward */
 	-moz-transform:perspective(400px) rotateX(10deg);

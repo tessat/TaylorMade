@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
   <title>Taylor Made Labs</title>
 
-	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One|Waiting+for+the+Sunrise|Raleway+Dots' rel='stylesheet' type='text/css'>
+	<!-- Meta Tags -->
+	<meta name="keywords" content="taylormade, html, css3" />
+	<meta name="description" content="Taylor Made for the web" />
+	
+	<meta property="og:title" content="Taylor Made Labs" />
+	<meta property="og:type" content="website" />
+	<meta property="og:description" content="Taylor Made for the web">
+	<meta property="og:url" content="<%= root_url %>" />
+	<meta property="og:image" content="<%= root_url+'assets/logo.jpg' %>" />
+	<meta property="og:site_name" content="Taylor Made Labs" />
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+	<!-- CSS -->
+	<link href='http://fonts.googleapis.com/css?family=Black+Ops+One|Waiting+for+the+Sunrise|Raleway+Dots' rel='stylesheet' type='text/css'>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+
+	<!-- JS -->
+	<%= set_js_variables %>
+	<%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
+	<!-- Google Analytics -->
 	<%= google_analytics %>
 
 </head>

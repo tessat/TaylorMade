@@ -133,9 +133,12 @@ ul {
 #footer {
 	font-size:11px;
 	padding:5px;
+	position:fixed;
+	bottom:0px;
 }
 
 #footer .copyright {
 	float:right;
 	text-align:right;
+	color:#132448;
 }

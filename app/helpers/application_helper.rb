@@ -1,5 +1,11 @@
 module ApplicationHelper
   
+  def set_js_variables
+    javascript_tag do
+      "window.newUser = #{@new_user}"
+    end
+  end
+  
   def google_analytics
     if (ENV['RAILS_ENV'] == 'production')
       return javascript_tag("var _gaq = _gaq || [];
