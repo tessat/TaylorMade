@@ -29,10 +29,13 @@ $(document).ready(function() {
 // ***************
 
 function animateIndexLoad() {
-	// Animate stamp
-	
-	// Animate sign
-	$('.pages.index .sign').trigger('animateSign');
+	animateHeader(function(r) {
+		setTimeout(function() {
+			// Animate sign
+			$('.pages.index .sign').trigger('animateSign');
+		}, 1000);
+
+	});
 }
 
 function quickIndexLoad() {

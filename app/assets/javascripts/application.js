@@ -13,3 +13,30 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+function animateHeader(callback) {
+	callback = callback || $.noop;
+	
+	// Hide the scrollbars
+	$('body').css({overflow: 'hidden'});
+	// Animate stamp
+	setTimeout(function() {
+		// Move in
+		$('#header .stamp').addClass('dostamp');
+		setTimeout(function() {
+			// Show stamp
+			$('#header h2').show();
+			// Move out
+			$('#header .stamp').removeClass('dostamp');
+			// Done
+			setTimeout(function() {
+				$('#header h2').addClass('animationDone');
+				$('#header .stamp').hide();
+				$('body').removeAttr('style');
+				callback(true);
+			}, 500);
+		}, 900);
+	}, 900);
+	
+}

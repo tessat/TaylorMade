@@ -30,8 +30,8 @@ $('.sign ul li').live('unfold', function() {
 function animateSign() {
 	// Animate sign load
 	$('.sign').addClass('animate');
-	$('.sign').removeClass('up');
-
+	$('.sign').css({top: '0px'});
+		
 	// Bounce sign
 	setTimeout(function() {
 		$('.sign').removeClass('animate');
@@ -77,7 +77,7 @@ function animateSign() {
 function showSign() {
 	// Show sign container
 	$('.sign-container').height('auto');
-	$('.sign-container .sign').css({top: 'auto'});
+	$('.sign-container .sign').removeClass('up');
 	
 	// Unfold sign
 	setTimeout(function() {
@@ -110,8 +110,8 @@ function unfold(rung) {
 				}
 			}
 			counter++;
-		}, 330);
+		}, 340);
 		
-	}, 100);
+	}, 220);
 }
 

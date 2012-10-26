@@ -90,6 +90,7 @@ ul {
 	height:90px;
 	border-top:1px solid #542b11;
 	border-bottom:2px solid #542b11;
+	position:relative;
 }
 
 #header h1 {
@@ -110,21 +111,80 @@ ul {
 	margin:0px auto;
 	padding:0px;
 	position:relative;
-	top:-60px;
+	top:-300px;
 	left:270px;
 	width:500px;
+	z-index:10;
 	
 	-moz-transform:rotate(-20deg);
 	-webkit-transform:rotate(-20deg);
 	-o-transform:rotate(-20deg);
 	-ms-transform:rotate(-20deg);
 	transform:rotate(-20deg);
+	
+	/* initial position (pre-animation) */
+	display:none;
+}
+
+#header h2.animationDone {
+	display:block;
+	top:-39px;
+}
+
+#header .stamp {
+	position:relative;
+	right:-800px;
+	top:-300px;
+	width:400px;
+	margin:0px auto;
+	z-index:100;
+	
+	-moz-transition: 0.6s ease-in;
+	-webkit-transition: 0.6s ease-in;
+	-o-transition: 0.6s ease-in;
+	-ms-transition: 0.6s ease-in;
+	transition: 0.6s ease-in;
+	
+	/* Rotation to simulate stamp movement */
+	-moz-transform:perspective(200px) rotate3d(0, 1, 1, 80deg);
+	-webkit-transform:perspective(200px) rotate3d(0, 1, 1, 80deg);
+	-o-transform:perspective(200px) rotate3d(0, 1, 1, 80deg);
+	-ms-transform:perspective(200px) rotate3d(0, 1, 1, 80deg);
+	transform:perspective(200px) rotate3d(0, 1, 1, 80deg);
+	
+	-moz-transform-origin:50% 50%;
+	-webkit-transform-origin:50% 50%;
+	-o-transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%;
+	transform-origin:50% 50%;
+}
+
+#header .stamp.dostamp {
+	/* Restore stamp to normal rotation */
+	-moz-transform:perspective(100px) rotate3d(0, 0, 0, 0deg);
+	-webkit-transform:perspective(100px) rotate3d(0, 0, 0, 0deg);
+	-o-transform:perspective(100px) rotate3d(0, 0, 0, 0deg);
+	-ms-transform:perspective(100px) rotate3d(0, 0, 0, 0deg);
+	transform:perspective(100px) rotate3d(0, 0, 0, 0deg);
+	
+	-moz-transform-origin:50% 30%;
+	-webkit-transform-origin:50% 30%;
+	-o-transform-origin:50% 30%;
+	-ms-transform-origin:50% 30%;
+	transform-origin:50% 30%;
+	
+	top:-160px;
+	right:-280px;	
+}
+
+#header .stamp img {
+	width:220px;
 }
 
 /* Content */
 
 #content {
-	min-height:500px;
+	min-height:300px;
 }
 
 
