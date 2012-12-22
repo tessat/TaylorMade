@@ -98,6 +98,14 @@ Pages
 	z-index:2000;
 }
 
+.pages.index .sign h1 span {
+	display:inline-block;
+	position:absolute;
+	top:120px;
+	left:550px;
+	font-size:25px;
+}
+
 .pages.index .sign h1 div.knots img {
 	bottom:25px;
 }
@@ -343,4 +351,23 @@ Pages
 	width:auto;
 	height:auto;
 }
+
+/* Varkala */
+
+.pages.index .sign ul li#varkala .info {
+	width:80%;
+}
+
+.pages.index .sign ul li#varkala h2 {
+	font-size:22px;
+	margin:5px 0px 10px;
+}
+
+/* Startup Headline */
+
+.pages.index .sign ul li#startupheadline .info {
+	width:80%;
+}
+
+
 
