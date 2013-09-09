@@ -7,24 +7,9 @@ Pages
 /* Pages: Index */
 
 .pages.index {
-	/* Fallback for web browsers that doesn't support RGBa */
-	background: rgb(255, 255, 255);
-	/* RGBa with opacity */
-	background: rgba(255, 255, 255, 0.8);
-	/* For IE 5.5 - 7*/
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF);
-	/* For IE 8*/
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99FFFFFF, endColorstr=#99FFFFFF)";
-	
 	width:875px;
 	margin:15px auto;
 	padding:5px 20px 10px;
-	
-	border:1px dashed #aaa;
-	-moz-border-radius: 10px; /* Firefox */
-	-webkit-border-radius: 10px; /* Safari, Chrome */
-	-khtml-border-radius: 10px;
-	border-radius: 10px; /* CSS3 */
 	
 	/* initial position (pre-animation) */
 	height:200px;

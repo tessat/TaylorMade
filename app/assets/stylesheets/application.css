@@ -17,10 +17,11 @@
 html, body {
 	margin:0px;
 	padding:0px;
+	overflow-x:hidden;
 }
 
 body {
-	background:url('../assets/bg-tree.png') #f0f6f0;
+	background:#f0f6f0;
 	color:#222;
 	font-family:Helvetica, Arial, sans-serif;
 	padding:0px;
